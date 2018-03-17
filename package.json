@@ -1,0 +1,76 @@
+{
+  "name": "hammerjack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "kevin j",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "webpack-dev-server --hot --inline",
+    "postinstall": "webpack -p --config webpack.prod.config.js",
+    "test": "jest --watchAll",
+    "lint": "eslint ./src/**/*.js"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/test.config.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "6",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "^4.18.1",
+    "eslint-plugin-react": "^7.7.0",
+    "file-loader": "^1.1.6",
+    "img-loader": "^2.0.1",
+    "jest": "^22.3.0",
+    "jest-styled-components": "^4.11.0-1",
+    "prop-types": "^15.6.0",
+    "react-test-renderer": "^16.2.0",
+    "sinon": "^4.4.6",
+    "style-loader": "^0.20.1",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.6",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "express": "^4.16.2",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.5",
+    "normalize.css": "^8.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-responsive-modal": "^2.0.0",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.2.2",
+    "react-slick": "^0.18.1",
+    "slick-carousel": "^1.8.1",
+    "string-format": "^0.5.0",
+    "styled-components": "3.1.6"
+  }
+}
